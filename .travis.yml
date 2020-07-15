@@ -1,4 +1,6 @@
+language: generic
 sudo: required
+
 services:
   - docker
 
@@ -10,11 +12,11 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: 'us-west-2'
-  app: 'docker-react'
-  env: 'DockerReact-env'
-  bucket_name: 'elasticbeanstalk-us-west-2-466578905758'
-  bucket_path: 'docker-react'
+  region: "us-west-2"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-west-2-466578905758"
+  bucket_path: "docker-react"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
